@@ -22,29 +22,6 @@ public class ProductController {
         this.productService = productService;
 
     }
-//
-//    @PostMapping(value = "saveProduct")
-//    public String saveProduct(@RequestParam String productName,
-//                              @RequestParam String author,
-//                              @RequestParam String album,
-//                              @RequestParam MultipartFile image,
-//                              @RequestParam String genre,
-//                              @RequestParam Date yearOfIssue,
-//                              @RequestParam MultipartFile file
-//    ) throws IOException {
-//        Product product = new Product();
-//
-//        product.setProductName(productName);
-//        product.setAuthor(author);
-//        product.setAlbum(album);
-//        product.setImage(image.getBytes());
-//        product.setGenre(genre);
-//        product.setYearOfIssue(yearOfIssue);
-//        product.setFile(file.getBytes());
-//
-//        productService.save(product);
-//        return "SUCCESS";
-//    }
 
     @GetMapping(value = "getProductByName")
     public List<Product> productByName(@RequestParam String productName) {

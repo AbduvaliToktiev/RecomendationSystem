@@ -15,4 +15,6 @@ public interface ProductService {
     List<Product> findByGenre(String genre);
 
     List<Product> findAllByProductName(String productName);
+
+    Product findById(Long id);
 }

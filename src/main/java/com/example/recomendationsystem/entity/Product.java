@@ -49,7 +49,4 @@ public class Product {
     @Lob
     @Column(name = "file")
     private byte[] file;
-//    @OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "audio_text_video_id", referencedColumnName = "id")
-//    private AudioTextVideo audioTextVideo;
 }

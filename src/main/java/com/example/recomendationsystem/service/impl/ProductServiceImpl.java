@@ -30,7 +30,7 @@ public class ProductServiceImpl implements ProductService {
     @Transactional
     @Override
     public List<Product> search(String productName) {
-       List<Product> products = productRepository.findByProductName(productName);
+        List<Product> products = productRepository.findByProductName(productName);
         return products;
     }
 
@@ -53,5 +53,10 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> findAllByProductName(String productName) {
         List<Product> products = productRepository.findAllByProductName(productName);
         return products;
+    }
+
+    @Override
+    public Product findById(Long id) {
+        return productRepository.findById(id).orElse(null);
     }
 }

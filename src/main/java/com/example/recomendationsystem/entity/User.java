@@ -14,11 +14,15 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "users")
+@Table(name = User.TABLE_NAME)
 public class User extends BaseEntity{
 
+    public static final String TABLE_NAME = "USERS";
+    public static final String SEQ_NAME = TABLE_NAME + "_SEQ";
+
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = SEQ_NAME)
+    @SequenceGenerator(name = SEQ_NAME, sequenceName = SEQ_NAME, allocationSize = 1)
     private Long id;
 
     @Column(name = "email")
